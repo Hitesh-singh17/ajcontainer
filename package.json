@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prebuild": "npm install libraryname1-0.0.1.tgz", 
+    "postbuild": "chmod 777 minify.sh && ./minify.sh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,6 +22,7 @@
     "@angular/router": "^14.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "uglify-js": "^3.17.4",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
